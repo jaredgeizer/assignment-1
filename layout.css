@@ -1,4 +1,4 @@
-div.header{
+header{
     position: fixed;
     top:0;
     left: 0;
@@ -17,44 +17,46 @@ h1{
     margin: 32px auto auto auto;
     
 }
-div.main{
-    position: relative;
+main{
+    position: float;
     display: flex;
-    top:135px;
-    justify-content: center;
+    align-items:stretch;
     max-width: 900px;
-    margin: auto;
+    margin: 130px auto auto auto;
     z-index: 3;
 }
-div.main > div{
+main > div{
     background-color:#ccc;
     min-width:250px;
-    margin:auto 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    flex-grow: 1;
     
 }
-div.main > div > p{
+main > div > p{
     margin: 15px;
     font-family: serif;
     font-size: 16px;
     color: rgb(0,0,0);
     line-height: 1.2;
+    max-height: 590px;
     overflow:hidden;
 }
-div.footer{
+footer{
     display: flex;
-    position: relative;
+    position: float;
     top:140px;
     justify-content: center;
     max-width: 900px;
     margin: 15px auto;
 }
-div.footer > div{
+footer > div{
     height: 90px;
     min-width: 330px;
     background-color: #ccc;
     margin: auto 5px;
 }
-div.footer > div > p{
+footer > div > p{
     height: 65px;
     overflow: hidden;
     margin:auto 20px;
@@ -67,28 +69,29 @@ div.footer > div > p{
 }
 
 @media (max-width: 800px){
-    div.main{
+    main{
         flex-wrap: wrap;
+        flex-direction: column;
         margin-bottom: 15px;
 }
-    div.main > div{
+    main > div{
         margin: 5px;
     }
-    div.main > div > p{
+    main > div > p{
         max-height: 250px;   
     }
 }
 @media (max-width: 690px){
-    div.footer{
+    footer{
         flex-wrap: wrap;
         margin: 0 auto;
         max-width: 430px;
     }
-    div.footer > div{
+    footer > div{
         margin: 5px; 
         height: 30px;
     }
-    div.footer > div > p{
+    footer > div > p{
         max-height: 18px;
         padding-top: 6px;
     }
